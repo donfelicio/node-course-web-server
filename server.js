@@ -49,13 +49,20 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {
-		pageTitle: "About page"
+		pageTitle: 'About page'
 	});
 });
 
 app.get('/bad', (req, res) => {
 	res.send({
 		errorMessage: 'This is an error'
+	});
+});
+
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs',{
+		pageTitle: 'Projects page',
+		welcomeMessage: 'This page hosts all my projects'
 	});
 });
 
